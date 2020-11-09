@@ -10,12 +10,19 @@
 
   <style>
     .bean {
-      margin-top: 5px;
+      display: block;
+      margin-top: 10px;
       margin-bottom: 5px;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+    }
+    .centerImg {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     #storm {
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 10px
     }
     .for-mobile {
       margin-left: auto;
@@ -28,19 +35,19 @@
 
     <div class="row justify-content-center for-mobile">
             <div class="col-sm-4">
-              <img src="https://c190draws.imfast.io/storm_pagedoll.png" width="300" alt="storm pagedoll" id="storm">
+              <img src="https://c190draws.imfast.io/storm_pagedoll.png" width="300" alt="storm pagedoll" id="storm" class="centerImg">
             </div>
     </div>
 
     <div class="row justify-content-center for-mobile">
-            <div class="col-sm-4">
-              <a href="about"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean"></a>
+            <div class="row">
+              <div class="column"><a href="about"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean"></a></div>
 
-              <a href="links"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean"></a>
+              <div class="column"><a href="links"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean"></a></div>
 
-              <a href="works"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean"></a>
+              <div class="column"><a href="works"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean"></a></div>
 
-              <a href="contact"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean"></a>
+              <div class="column"><a href="contact"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean"></a></div>
             </div>
     </div>
 

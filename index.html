@@ -41,16 +41,48 @@
 
     <div class="row justify-content-center for-mobile">
             <div class="row">
-              <div class="column"><a href="about"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean"></a></div>
+               <div class="column"><a href="about"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="aboutButton" onmouseover="darkenAbout()" onmouseout="returnAbout()"></a></div>
 
-              <div class="column"><a href="links"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean"></a></div>
+              <div class="column"><a href="links"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="linksButton" onmouseover="darkenLinks()" onmouseout="returnLinks()"></a></div>
 
-              <div class="column"><a href="works"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean"></a></div>
+              <div class="column"><a href="works"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="worksButton" onmouseover="darkenWorks()" onmouseout="returnWorks()"></a></div>
 
-              <div class="column"><a href="contact"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean"></a></div>
+              <div class="column"><a href="contact"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contactButton" onmouseover="darkenContact()" onmouseout="returnContact()"></a></div>
             </div>
     </div>
 
-  </div>
+    <script type="text/javascript">
+    //this is so small-brain jesus christ
+    /* String[] btnNames = {"about", "links", "works", "contact"}; */
+
+      function darkenAbout() {
+         document.getElementById("aboutButton").src = "https://c190stash.imfast.io/about1.png";
+      };
+      function returnAbout() {
+         document.getElementById("aboutButton").src = "https://c190stash.imfast.io/about.png";
+      };
+
+            function darkenLinks() {
+         document.getElementById("linksButton").src = "https://c190stash.imfast.io/links1.png";
+      };
+      function returnLinks() {
+         document.getElementById("linksButton").src = "https://c190stash.imfast.io/links.png";
+      };
+
+            function darkenWorks() {
+         document.getElementById("worksButton").src = "https://c190stash.imfast.io/works1.png";
+      };
+      function returnWorks() {
+         document.getElementById("worksButton").src = "https://c190stash.imfast.io/works.png";
+      };
+
+            function darkenContact() {
+         document.getElementById("contactButton").src = "https://c190stash.imfast.io/contact1.png";
+      };
+      function returnContact() {
+         document.getElementById("contactButton").src = "https://c190stash.imfast.io/contact.png";
+      };
+    </script>
+    
   </body>
 </html>

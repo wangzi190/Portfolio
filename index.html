@@ -9,23 +9,19 @@
   </head>
 
   <style>
-    .bean {
-      display: block;
-      margin-top: 10px;
-      margin-bottom: 5px;
-      margin-left: 2.5px;
-      margin-right: 2.5px;
+    #myName {
+      margin-top: 2rem;
     }
-    .centerImg {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    #aboutButton {
+      margin-top: 2rem;
+    }
+    .bean {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
     #storm {
-      margin-top: 5px
-    }
-    #myName {
-      margin-top: 15px
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
     }
     .for-mobile {
       margin-left: auto;
@@ -37,32 +33,42 @@
   <div class="container">
 
     <div class="row justify-content-center for-mobile">
-            <div class="col-sm-4">
-              <img src="https://c190stash.imfast.io/name2.png" width="300" alt="gray zhuang" id="myName" class="centerImg">
-            </div>
+      <img src="https://c190stash.imfast.io/name2.png" width="300" alt="gray zhuang" id="myName">
     </div>
 
     <div class="row justify-content-center for-mobile">
-            <div class="col-sm-4">
-              <img src="https://c190draws.imfast.io/storm_pagedoll.png" width="300" alt="storm pagedoll" id="storm" class="centerImg">
-            </div>
-    </div>
+      <div class="column">
+        <div class="row">
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="aboutButton" onmouseover="darkenAbout()" onmouseout="returnAbout()"></a></div>
+        </div>
 
-    <div class="row justify-content-center for-mobile">
-            <div class="row">
-               <div class="column"><a href="about"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="aboutButton" onmouseover="darkenAbout()" onmouseout="returnAbout()"></a></div>
+        <div class="row">
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="linksButton" onmouseover="darkenLinks()" onmouseout="returnLinks()"></a></div>
+        </div>
 
-              <div class="column"><a href="links"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="linksButton" onmouseover="darkenLinks()" onmouseout="returnLinks()"></a></div>
+        <div class="row">
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="worksButton" onmouseover="darkenWorks()" onmouseout="returnWorks()"></a></div>
+        </div>
 
-              <div class="column"><a href="works"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="worksButton" onmouseover="darkenWorks()" onmouseout="returnWorks()"></a></div>
+        <div class="row">
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contactButton" onmouseover="darkenContact()" onmouseout="returnContact()"></a></div>
+        </div>
+      </div>
 
-              <div class="column"><a href="contact"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contactButton" onmouseover="darkenContact()" onmouseout="returnContact()"></a></div>
-            </div>
+      <div class="column">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="https://c190draws.imfast.io/storm_pagedoll.png" width="300" alt="storm pagedoll" id="storm">
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript">
     //this is so small-brain jesus christ
     /* String[] btnNames = {"about", "links", "works", "contact"}; */
+
+      var btnName = document.getElementById();
 
       function darkenAbout() {
          document.getElementById("aboutButton").src = "https://c190stash.imfast.io/about1.png";

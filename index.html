@@ -39,19 +39,19 @@
     <div class="row justify-content-center for-mobile">
       <div class="column">
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="aboutButton" onmouseover="darkenAbout()" onmouseout="returnAbout()"></a></div>
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="about" onmouseover="darkenButton(document.getElementById('about').id)" onmouseout="returnButton(document.getElementById('about').id)"></a></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="linksButton" onmouseover="darkenLinks()" onmouseout="returnLinks()"></a></div>
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(document.getElementById('links').id)" onmouseout="returnButton(document.getElementById('links').id)"></a></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="worksButton" onmouseover="darkenWorks()" onmouseout="returnWorks()"></a></div>
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="works" onmouseover="darkenButton(document.getElementById('works').id)" onmouseout="returnButton(document.getElementById('works').id)"></a></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contactButton" onmouseover="darkenContact()" onmouseout="returnContact()"></a></div>
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contact" onmouseover="darkenButton(document.getElementById('contact').id)" onmouseout="returnButton(document.getElementById('contact').id)"></a></div>
         </div>
       </div>
 
@@ -65,38 +65,16 @@
     </div>
 
     <script type="text/javascript">
-    //this is so small-brain jesus christ
-    /* String[] btnNames = {"about", "links", "works", "contact"}; */
 
-      var btnName = document.getElementById();
+      var darkenButton = function(id) {
+        var darkenSource = "https://c190stash.imfast.io/" + id + "1.png";
+        document.getElementById(id).src = darkenSource;
+      }
+      var returnButton = function(id) {
+        var returnSource = "https://c190stash.imfast.io/" + id + ".png";
+        document.getElementById(id).src = returnSource;
+      }
 
-      function darkenAbout() {
-         document.getElementById("aboutButton").src = "https://c190stash.imfast.io/about1.png";
-      };
-      function returnAbout() {
-         document.getElementById("aboutButton").src = "https://c190stash.imfast.io/about.png";
-      };
-
-            function darkenLinks() {
-         document.getElementById("linksButton").src = "https://c190stash.imfast.io/links1.png";
-      };
-      function returnLinks() {
-         document.getElementById("linksButton").src = "https://c190stash.imfast.io/links.png";
-      };
-
-            function darkenWorks() {
-         document.getElementById("worksButton").src = "https://c190stash.imfast.io/works1.png";
-      };
-      function returnWorks() {
-         document.getElementById("worksButton").src = "https://c190stash.imfast.io/works.png";
-      };
-
-            function darkenContact() {
-         document.getElementById("contactButton").src = "https://c190stash.imfast.io/contact1.png";
-      };
-      function returnContact() {
-         document.getElementById("contactButton").src = "https://c190stash.imfast.io/contact.png";
-      };
     </script>
     
   </body>

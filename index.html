@@ -12,7 +12,7 @@
     #myName {
       margin-top: 2rem;
     }
-    #aboutButton {
+    #about {
       margin-top: 2rem;
     }
     .bean {
@@ -22,6 +22,9 @@
     #storm {
       margin-top: 0.5rem;
       margin-left: 1.5rem;
+    }
+    #back {
+      margin-top: 0.5rem;
     }
     .for-mobile {
       margin-left: auto;
@@ -64,8 +67,13 @@
       </div>
     </div>
 
+    <div class="row justify-content-center for-mobile">
+      <img src="https://c190stash.imfast.io/back.png" width="45" alt="back" id="back" onmouseover="darkenButton(document.getElementById('back').id)" onmouseout="returnButton(document.getElementById('back').id)">
+    </div>
+
     <script type="text/javascript">
 
+      var pageName;
       var darkenButton = function(id) {
         var darkenSource = "https://c190stash.imfast.io/" + id + "1.png";
         document.getElementById(id).src = darkenSource;

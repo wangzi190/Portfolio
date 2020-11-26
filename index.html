@@ -42,19 +42,19 @@
     <div class="row justify-content-center for-mobile">
       <div class="column">
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="about" onmouseover="darkenButton(document.getElementById('about').id)" onmouseout="returnButton(document.getElementById('about').id)"></a></div>
+          <div class="column"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="about" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain()"></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="links"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(document.getElementById('links').id)" onmouseout="returnButton(document.getElementById('links').id)"></a></div>
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)"></a></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="works" onmouseover="darkenButton(document.getElementById('works').id)" onmouseout="returnButton(document.getElementById('works').id)"></a></div>
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="works" onmouseover="darkenButton(id)" onmouseout="returnButton(id)"></a></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contact" onmouseover="darkenButton(document.getElementById('contact').id)" onmouseout="returnButton(document.getElementById('contact').id)"></a></div>
+          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contact" onmouseover="darkenButton(id)" onmouseout="returnButton(id)"></a></div>
         </div>
       </div>
 
@@ -68,22 +68,40 @@
     </div>
 
     <div class="row justify-content-center for-mobile">
-      <img src="https://c190stash.imfast.io/back.png" width="45" alt="back" id="back" onmouseover="darkenButton(document.getElementById('back').id)" onmouseout="returnButton(document.getElementById('back').id)">
+      <img src="https://c190stash.imfast.io/back.png" width="45" alt="back" id="back" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnMain()" hidden="true">
     </div>
 
     <script type="text/javascript">
-
       var pageName;
       var darkenButton = function(id) {
         var darkenSource = "https://c190stash.imfast.io/" + id + "1.png";
         document.getElementById(id).src = darkenSource;
-      }
+      };
       var returnButton = function(id) {
-        var returnSource = "https://c190stash.imfast.io/" + id + ".png";
-        document.getElementById(id).src = returnSource;
-      }
-
+        if (id != pageName) {
+          var returnSource = "https://c190stash.imfast.io/" + id + ".png";
+          document.getElementById(id).src = returnSource;
+        } else {
+          var darkenSource = "https://c190stash.imfast.io/" + id + "1.png";
+          document.getElementById(id).src = darkenSource;
+        }
+      };
+      function switchMain(id) {
+        if (id = "about") {
+          document.getElementById("back").hidden = false;
+          document.getElementById("storm").src = "https://c190stash.imfast.io/hello.png";
+          pageName = "about";
+        } else if (id = "contact") {
+          //insert
+        }
+      };
+      function returnMain() {
+        document.getElementById("storm").src = "https://c190draws.imfast.io/storm_pagedoll.png";
+        document.getElementById(pageName).src = "https://c190stash.imfast.io/" + pageName + ".png";
+        document.getElementById("back").hidden = true;
+        pageName = "index";
+      };
     </script>
-    
+
   </body>
 </html>

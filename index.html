@@ -42,19 +42,19 @@
     <div class="row justify-content-center for-mobile">
       <div class="column">
         <div class="row">
-          <div class="column"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="about" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain()"></div>
+          <div class="column"><img src="https://c190stash.imfast.io/about.png" width="75" alt="about" class="bean" id="about" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)"></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)"></a></div>
+          <div class="column"><img src="https://c190stash.imfast.io/links.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)"></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="works" onmouseover="darkenButton(id)" onmouseout="returnButton(id)"></a></div>
+          <div class="column"><img src="https://c190stash.imfast.io/works.png" width="70" alt="works" class="bean" id="works" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)"></div>
         </div>
 
         <div class="row">
-          <div class="column"><a href="index"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contact" onmouseover="darkenButton(id)" onmouseout="returnButton(id)"></a></div>
+          <div class="column"><img src="https://c190stash.imfast.io/contact.png" width="75" alt="contact" class="bean" id="contact" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)"></div>
         </div>
       </div>
 
@@ -73,10 +73,12 @@
 
     <script type="text/javascript">
       var pageName;
+
       var darkenButton = function(id) {
         var darkenSource = "https://c190stash.imfast.io/" + id + "1.png";
         document.getElementById(id).src = darkenSource;
       };
+
       var returnButton = function(id) {
         if (id != pageName) {
           var returnSource = "https://c190stash.imfast.io/" + id + ".png";
@@ -86,15 +88,49 @@
           document.getElementById(id).src = darkenSource;
         }
       };
+
       function switchMain(id) {
-        if (id = "about") {
-          document.getElementById("back").hidden = false;
-          document.getElementById("storm").src = "https://c190stash.imfast.io/hello.png";
-          pageName = "about";
-        } else if (id = "contact") {
-          //insert
+        var buttonNames = ["about", "links", "works", "contact"];
+        buttonNames = buttonNames.filter(e => e !== id);
+        function buttonHideButton() {
+          var i = 2;
+          while (i > -1) {
+            document.getElementById(buttonNames[i]).src = "https://c190stash.imfast.io/" + buttonNames[i] + ".png";
+            i--;
+          }
+        }
+        switch(id) {
+          case "about":
+            buttonHideButton();
+            document.getElementById("back").hidden = false;
+            pageName = "about";
+            document.getElementById("storm").src = "https://c190stash.imfast.io/hello.png";
+          break;
+
+          case "links":
+            buttonHideButton();
+            document.getElementById("back").hidden = true; //remove
+            pageName = "links";
+            document.getElementById("storm").src = "https://c190draws.imfast.io/storm_pagedoll.png"; //change
+          break;
+
+          case "works":
+            buttonHideButton();
+            document.getElementById("back").hidden = true; //remove
+            pageName = "works";
+            document.getElementById("storm").src = "https://c190draws.imfast.io/storm_pagedoll.png"; //change
+          break;
+          
+          case "contact":
+            buttonHideButton();
+            //document.getElementById("back").hidden = false;
+            document.getElementById("back").hidden = true; //remove
+            pageName = "contact";
+            document.getElementById("storm").src = "https://c190draws.imfast.io/storm_pagedoll.png"; //change
+          break;
         }
       };
+
       function returnMain() {
         document.getElementById("storm").src = "https://c190draws.imfast.io/storm_pagedoll.png";
         document.getElementById(pageName).src = "https://c190stash.imfast.io/" + pageName + ".png";
@@ -102,6 +138,5 @@
         pageName = "index";
       };
     </script>
-
   </body>
 </html>

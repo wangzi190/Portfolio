@@ -105,20 +105,23 @@
             document.getElementById("back").hidden = false;
             pageName = "about";
             document.getElementById("storm").src = "https://c190stash.imfast.io/hello.png";
+            document.getElementById("storm").alt = "hello! I'm Gray, a high school student with a passion for drawing & coding ^__^";
           break;
 
           case "links":
             buttonHideButton();
-            document.getElementById("back").hidden = true; //remove
+            document.getElementById("back").hidden = true; //remove(?)
             pageName = "links";
             document.getElementById("storm").src = "https://c190draws.imfast.io/storm_pagedoll.png"; //change
+            document.getElementById("storm").alt = "storm pagedoll";
           break;
 
           case "works":
             buttonHideButton();
-            document.getElementById("back").hidden = true; //remove
+            document.getElementById("back").hidden = true; //remove(?)
             pageName = "works";
             document.getElementById("storm").src = "https://c190draws.imfast.io/storm_pagedoll.png"; //change
+            document.getElementById("storm").alt = "storm pagedoll";
           break;
           
           case "contact":
@@ -126,12 +129,14 @@
             document.getElementById("back").hidden = false;
             pageName = "contact";
             document.getElementById("storm").src = "https://c190stash.imfast.io/contact_icons.png";
+            document.getElementById("storm").alt = "my email is c190draws@gmail.com and my discord tag is 小王子#0164";
           break;
         }
       };
 
       function returnMain() {
         document.getElementById("storm").src = "https://c190draws.imfast.io/storm_pagedoll.png";
+        document.getElementById("storm").alt = "storm pagedoll";
         document.getElementById(pageName).src = "https://c190stash.imfast.io/" + pageName + ".png";
         document.getElementById("back").hidden = true;
         pageName = "index";

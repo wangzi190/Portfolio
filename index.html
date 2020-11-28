@@ -141,6 +141,28 @@
         document.getElementById("back").hidden = true;
         pageName = "index";
       };
+
+      function mobileView(x) {
+        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back"];
+        var elementSizes = ["75", "75", "70", "75", "300", "300", "45"];
+        if (x.matches) {
+          var i = 6;
+          while (i > -1) {
+            document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * 0.75;
+            i--;
+          }
+        } else {
+          var i = 6;
+          while (i > -1) {
+          document.getElementById(pageElements[i]).width = elementSizes[i];
+          i--;
+          }
+        }
+      }
+      var x = window.matchMedia("(max-width: 700px)")
+      mobileView(x)
+      x.addListener(mobileView)
     </script>
+    
   </body>
 </html>

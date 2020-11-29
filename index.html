@@ -7,28 +7,6 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="script.js"></script>
-    <script type="text/javascript">
-      function mobileView(x) {
-        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back"];
-        var elementSizes = ["75", "75", "70", "75", "300", "300", "45"];
-        if (x.matches) {
-          var i = 6;
-          while (i > -1) {
-            document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * 0.75;
-            i--;
-          }
-        } else {
-          var i = 6;
-          while (i > -1) {
-          document.getElementById(pageElements[i]).width = elementSizes[i];
-          i--;
-          }
-        }
-      }
-      var x = window.matchMedia("(max-width: 700px)")
-      mobileView(x)
-      x.addListener(mobileView)
-    </script>
   </head>
 
   <style>
@@ -93,6 +71,29 @@
     <div class="row justify-content-center for-mobile">
       <img src="https://c190stash.imfast.io/back.png" width="45" alt="back" id="back" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnMain()" hidden="true">
     </div>
+    
+    <script type="text/javascript">
+      function mobileView(x) {
+        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back"];
+        var elementSizes = ["75", "75", "70", "75", "300", "300", "45"];
+        if (x.matches) {
+          var i = 6;
+          while (i > -1) {
+            document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * 0.75;
+            i--;
+          }
+        } else {
+          var i = 6;
+          while (i > -1) {
+          document.getElementById(pageElements[i]).width = elementSizes[i];
+          i--;
+          }
+        }
+      }
+      var x = window.matchMedia("(max-width: 700px)")
+      mobileView(x)
+      x.addListener(mobileView)
+    </script>
     
   </body>
 </html>

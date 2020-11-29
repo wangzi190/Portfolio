@@ -76,10 +76,11 @@
       function mobileView(x) {
         var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back"];
         var elementSizes = ["75", "75", "70", "75", "300", "300", "45"];
+        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75"];
         if (x.matches) {
           var i = 6;
           while (i > -1) {
-            document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * 0.75;
+            document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * elementPercentages[i];
             i--;
           }
         } else {

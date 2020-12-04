@@ -26,6 +26,7 @@
           case "about":
             buttonHideButton();
             document.getElementById("back").hidden = false;
+            document.getElementById("email").hidden = true;
             pageName = "about";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564842-f9002c80-3276-11eb-8d62-041320521884.png";
             document.getElementById("storm").alt = "hello! I'm Gray, a high school student with a passion for drawing & coding ^__^";
@@ -34,6 +35,7 @@
           case "links":
             buttonHideButton();
             document.getElementById("back").hidden = true;
+            document.getElementById("email").hidden = true;
             pageName = "links";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
             document.getElementById("storm").alt = "storm pagedoll";
@@ -42,6 +44,7 @@
           case "works":
             buttonHideButton();
             document.getElementById("back").hidden = false;
+            document.getElementById("email").hidden = true;
             pageName = "works";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564945-36fd5080-3277-11eb-9a64-c2092a0e8d97.png";
             document.getElementById("storm").alt = "coming soon :)";
@@ -50,8 +53,9 @@
           case "contact":
             buttonHideButton();
             document.getElementById("back").hidden = false;
+            document.getElementById("email").hidden = false;
             pageName = "contact";
-            document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564905-1af9af00-3277-11eb-8e6b-974df7224b14.png";
+            document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/101113469-4d1b5180-3594-11eb-984e-9507198421d1.png";
             document.getElementById("storm").alt = "my email is c190draws@gmail.com and my discord tag is 小王子#0164";
           break;
         }
@@ -62,5 +66,6 @@
         document.getElementById("storm").alt = "storm pagedoll";
         document.getElementById(pageName).style.filter = "brightness(100%)";
         document.getElementById("back").hidden = true;
+        document.getElementById("email").hidden = true;
         pageName = "index";
       };

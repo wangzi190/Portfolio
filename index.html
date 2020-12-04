@@ -27,6 +27,21 @@
     #back {
       margin-top: 0.5rem;
     }
+    #parentSquare {
+      position: relative;
+    }
+    #childSquare {
+      position: absolute;
+      top: 6.25rem;
+      left: 3.25rem;"
+    }
+    @media only screen and (max-width: 700px) {
+      #childSquare {
+        position: absolute;
+        top: 4.75rem;
+        left: 3.15rem;"
+      }
+    }
     .for-mobile {
       margin-left: auto;
       margin-right: auto;
@@ -62,7 +77,11 @@
       <div class="column">
         <div class="row">
           <div class="column">
-            <img src="https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png" width="300" alt="storm pagedoll" id="storm">
+            <div id="parentSquare"><img src="https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png" width="300" alt="storm pagedoll" id="storm">
+              <div id="childSquare">
+                <a href="mailto:c190draws@gmail.com"><img src="https://user-images.githubusercontent.com/57303754/100697052-d4c15000-3349-11eb-818b-9477681b8f2d.png" alt="email" id="email"  onmouseover="darkenButton(id)" onmouseout="returnButton(id)" hidden="true"></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -74,27 +93,28 @@
     
     <script type="text/javascript">
       function mobileView(x) {
-        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back"];
-        var elementSizes = ["75", "75", "70", "75", "300", "300", "45"];
-        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75"];
+        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back", "email"];
+        var elementSizes = ["75", "75", "70", "75", "300", "300", "45", "73"];
+        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75", "0.75"];
         if (x.matches) {
-          var i = 6;
+          var i = 7;
           while (i > -1) {
             document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * elementPercentages[i];
             i--;
           }
         } else {
-          var i = 6;
+          var i = 7;
           while (i > -1) {
           document.getElementById(pageElements[i]).width = elementSizes[i];
           i--;
           }
         }
       }
+
       var x = window.matchMedia("(max-width: 700px)")
       mobileView(x)
       x.addListener(mobileView)
+
     </script>
-    
   </body>
 </html>

@@ -1,4 +1,4 @@
 # portfolio
 work-in-progress
 
-note to self: last index.html update works but caused button issues :|
+note to self: last update messed up some stuff how about you actually make different branches holy sht

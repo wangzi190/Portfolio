@@ -11,6 +11,11 @@
           document.getElementById(id).style.filter = "brightness(82%)";
         }
       };
+      
+      function refreshButton(id) {
+        darkenButton(id);
+        returnButton(id);
+      }
 
       function switchMain(id) {
         var buttonNames = ["about", "links", "works", "contact"];

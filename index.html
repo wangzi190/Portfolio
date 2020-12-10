@@ -16,6 +16,9 @@
     #about {
       margin-top: 2rem;
     }
+    #forward {
+      margin-left: 1rem;
+    }
     .bean {
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
@@ -33,25 +36,25 @@
       margin-top: 0.5rem;
       margin-left: 2.5rem;
     }
-    #childSquare {
+    #mailIcon {
       position: absolute;
       top: 5.25rem;
       left: 1.25rem;"
     }
     @media only screen and (max-width: 700px) {
-      #childSquare {
+      #mailIcon {
         position: absolute;
         top: 4rem;
         left: 1.15rem;
       }
     }
-    #childSquare2 {
+    #discordIcon {
       position: absolute;
       top: 9.75rem;
       left: 0.9rem;
     }
     @media only screen and (max-width: 700px) {
-      #childSquare2 {
+      #discordIcon {
         position: absolute;
         top: 7.2rem;
         left: 0.8rem;
@@ -67,7 +70,7 @@
   <div class="container">
 
     <div class="row justify-content-center for-mobile">
-      <img src="https://user-images.githubusercontent.com/57303754/101820199-1fc22c80-3adb-11eb-849e-b78fe9c70a2a.png" width="300" alt="gray zhuang" id="myName">
+      <img src="https://user-images.githubusercontent.com/57303754/100564310-89d60880-3275-11eb-8fed-b6e300bf40f8.png" width="300" alt="gray zhuang" id="myName">
     </div>
 
     <div class="row justify-content-center for-mobile">
@@ -77,7 +80,7 @@
         </div>
 
         <div class="row">
-          <div class="column"><a href="links"><img src="https://user-images.githubusercontent.com/57303754/100563572-8c376300-3273-11eb-8ab5-79b2794c130a.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)" onload="refreshButton(id)"></a></div>
+          <div class="column"><a href="links"><img src="https://user-images.githubusercontent.com/57303754/100563572-8c376300-3273-11eb-8ab5-79b2794c130a.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="" onload="refreshButton(id)"></a></div>
         </div>
 
         <div class="row">
@@ -93,10 +96,10 @@
         <div class="row">
           <div class="column">
             <div id="parentSquare"><img src="https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png" width="300" alt="storm pagedoll" id="storm" >
-              <div id="childSquare">
+              <div id="mailIcon">
                 <a href="mailto:c190draws@gmail.com"><img src="https://user-images.githubusercontent.com/57303754/100697052-d4c15000-3349-11eb-818b-9477681b8f2d.png" alt="email" id="email"  onmouseover="darkenButton(id)" onmouseout="returnButton(id)" hidden="true"></a>
               </div>
-              <div id="childSquare2">
+              <div id="discordIcon">
                 <a href="https://discord.gg/JCfcdTwtju" target="_blank"><img src="https://user-images.githubusercontent.com/57303754/101148549-9b4f4580-35d2-11eb-82aa-a60bbf0b5451.png" alt="discord" id="discord"  onmouseover="darkenButton(id)" onmouseout="returnButton(id)" hidden="true"></a>
               </div>
             </div>
@@ -106,22 +109,23 @@
     </div>
 
     <div class="row justify-content-center for-mobile">
-      <img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" width="45" alt="back" id="back" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnMain()" hidden="true">
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" width="45" alt="back" id="back" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnMain(id)" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/101407815-4d676580-3890-11eb-8da5-7d64a60941ef.png" width="45" alt="forward" id="forward" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="slideNumbers(id)" hidden="true"></div>
     </div>
     
     <script type="text/javascript">
       function mobileView(x) {
-        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back", "email", "discord"];
-        var elementSizes = ["75", "75", "70", "75", "300", "300", "45", "73", "70"];
-        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75", "0.75", "0.75"];
+        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back", "forward", "email", "discord"];
+        var elementSizes = ["75", "75", "70", "75", "300", "300", "45", "45", "73", "70"];
+        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75", "0.75", "0.75", "0.75"];
         if (x.matches) {
-          var i = 8;
+          var i = 9;
           while (i > -1) {
             document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * elementPercentages[i];
             i--;
           }
         } else {
-          var i = 8;
+          var i = 9;
           while (i > -1) {
           document.getElementById(pageElements[i]).width = elementSizes[i];
           i--;

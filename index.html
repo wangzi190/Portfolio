@@ -16,7 +16,7 @@
     #about {
       margin-top: 2rem;
     }
-    #forward {
+    .nextToBack {
       margin-left: 1rem;
     }
     .bean {
@@ -29,6 +29,10 @@
     }
     #back {
       margin-top: 0.5rem;
+    }
+    #galleryBack {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
     }
     #parentSquare {
       position: relative;
@@ -64,13 +68,84 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .galleryOption {
+      margin-top: 1.75rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 2.25rem;
+      brightness: 100;
+    }
+    .art {
+      margin-top: 1.5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+    #sketchIcon {
+      margin-top: 3.3rem;
+    }
+    #majorIcon {
+      margin-left: 1.3rem;
+    }
+    @font-face {
+      font-family: Handwriting-Regular;
+      src: url(Handwriting-Regular.woff);
+    }
   </style>
 
   <body style="background-color:#74d36b;>
   <div class="container">
 
     <div class="row justify-content-center for-mobile">
-      <img src="https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png" width="300" alt="gray zhuang" id="myName">
+      <div class="parentName">
+        <div class="row justify-content-center for-mobile">
+          <img src="https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png" width="300" alt="gray zhuang" id="myName">
+        </div>
+        
+          <div class="row justify-content-center for-mobile">
+            <div class="sketchIcon"><img src="https://user-images.githubusercontent.com/57303754/102733297-bcfa3d80-42f1-11eb-9440-0112043672f3.png" width="120" alt="sketch" id="sketchIcon" class="galleryOption" hidden="true" onmousedown="gallerySelection(id)"></div>
+
+            <div class="minorIcon"><img src="https://user-images.githubusercontent.com/57303754/102738041-d2756480-42fd-11eb-8722-65369efa2861.png" width="105" alt="minor" id="minorIcon" class="galleryOption" hidden="true" onmousedown="gallerySelection(id)"></div>
+
+            <div class="majorIcon"><img src="https://user-images.githubusercontent.com/57303754/102741401-15880580-4307-11eb-93e0-a389344918be.png" width="160" alt="major" id="majorIcon" class="galleryOption" hidden="true" onmousedown="gallerySelection(id)"></div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center for-mobile">
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102005041-ab4de000-3cca-11eb-9934-30367ab23212.png" width="300" id="wolfStudy" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102005044-ad17a380-3cca-11eb-95e5-a4a3f1cc7643.png" width="300" id="horseStudy" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102005039-aa1cb300-3cca-11eb-8575-84f994df4b9c.png" width="300" id="orchid" class="art" hidden="true"></div>
+    </div>
+
+    <div class="row justify-content-center for-mobile">
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102111030-c0219500-3dea-11eb-9bb7-9d89a434c7b2.png" width="300" id="flower" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102113342-c7966d80-3ded-11eb-991e-a7b037cdea74.png" width="300" id="tuershen" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102111072-ca439380-3dea-11eb-8f5b-a2bc435c19c3.png" width="300" id="succulent" class="art" hidden="true"></div>
+    </div>
+
+    <div class="row justify-content-center for-mobile">
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102756420-be912900-4324-11eb-80ed-7ef056ae64f0.png" width="300" id="blm" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102111215-f2cb8d80-3dea-11eb-8240-494a455ba3d3.png" width="300" id="quote" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102757009-86d6b100-4325-11eb-8c0d-ad0797c5c618.png" width="300" id="kimpa" class="art" hidden="true"></div>
+    </div>
+
+    <div class="row justify-content-center for-mobile">
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102113333-c49b7d00-3ded-11eb-9004-3f1d32a30426.png" width="300" id="crayonFlower" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102114803-83a46800-3def-11eb-806f-a9bed5578fb8.png" width="300" id="polarbear" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102111111-d4fe2880-3dea-11eb-902b-6d0a557f7bf8.png" width="300" id="rhino" class="art" hidden="true"></div>
+    </div>
+
+    <div class="row justify-content-center for-mobile">
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102324563-dc324d00-3f36-11eb-865e-c4e4a15cd033.png" width="300" id="majorFlower" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102324522-d2a8e500-3f36-11eb-9d69-3d57345d38c5.png" width="300" id="banff" class="art" hidden="true"></div>
+      <div class="column"><img src="" width="300" id="" class="art" hidden="true"></div>
+    </div>
+
+    <div class="row justify-content-center for-mobile">
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102113337-c6654080-3ded-11eb-8952-7fcf628f9a0d.png" width="300" id="kitteysocks" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102756280-7a058d80-4324-11eb-8605-362f4ea63fe4.png" width="300" id="haring" class="art" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/102758473-a40c7f00-4327-11eb-98df-36be5b732e87.png" width="300" id="wipFlower" class="art" hidden="true"></div>
     </div>
 
     <div class="row justify-content-center for-mobile">
@@ -80,11 +155,11 @@
         </div>
 
         <div class="row">
-          <div class="column"><a href="links"><img src="https://user-images.githubusercontent.com/57303754/100563572-8c376300-3273-11eb-8ab5-79b2794c130a.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="" onload="refreshButton(id)"></a></div>
+          <div class="column"><img src="https://user-images.githubusercontent.com/57303754/100563586-95c0cb00-3273-11eb-8c85-553753cfb811.png" width="70" alt="works" class="bean" id="works" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)" onload="refreshButton(id)"></div>
         </div>
 
         <div class="row">
-          <div class="column"><img src="https://user-images.githubusercontent.com/57303754/100563586-95c0cb00-3273-11eb-8c85-553753cfb811.png" width="70" alt="works" class="bean" id="works" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)" onload="refreshButton(id)"></div>
+          <div class="column"><a href="links"><img src="https://user-images.githubusercontent.com/57303754/100563572-8c376300-3273-11eb-8ab5-79b2794c130a.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)" onload="refreshButton(id)"></a></div>
         </div>
 
         <div class="row">
@@ -110,28 +185,37 @@
 
     <div class="row justify-content-center for-mobile">
       <div class="column"><img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" width="45" alt="back" id="back" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnMain(id)" hidden="true"></div>
-      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/101407815-4d676580-3890-11eb-8da5-7d64a60941ef.png" width="45" alt="forward" id="forward" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="slideNumbers(id)" hidden="true"></div>
+      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/101407815-4d676580-3890-11eb-8da5-7d64a60941ef.png" width="45" alt="forward" id="forward" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="slideNumbers(id)" hidden="true"><img src="https://user-images.githubusercontent.com/57303754/101849108-d76f3280-3b0b-11eb-95fe-fb3bb709f739.png" width="70" alt="play" id="play" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="openGallery()" hidden="true"><img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" width="45" alt="back" id="galleryBack" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnGallery()" hidden="true"></div>
     </div>
     
     <script type="text/javascript">
+
       function mobileView(x) {
-        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back", "forward", "email", "discord"];
-        var elementSizes = ["75", "75", "70", "75", "300", "300", "45", "45", "73", "70"];
-        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75", "0.75", "0.75", "0.75"];
+        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back", "forward", "email", "discord", "sketchIcon", "minorIcon", "majorIcon", "play", "galleryBack"];
+        var elementSizes = ["75", "75", "70", "75", "300", "300", "45", "45", "73", "70", "120", "105", "160", "70", "45"];
+        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75", "0.75", "0.75", "0.75", "0.7", "0.7", "0.7", "0.75", "0.75"];
         if (x.matches) {
-          var i = 9;
+          var i = 14;
           while (i > -1) {
             document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * elementPercentages[i];
             i--;
           }
+          document.getElementById("sketchIcon").style.marginRight = "0.5rem"; 
+          document.getElementById("minorIcon").style.marginRight = "0.5rem"; 
+          document.getElementById("minorIcon").style.marginLeft = "0.5rem"; 
+          document.getElementById("majorIcon").style.marginLeft = "0.75rem"; 
         } else {
-          var i = 9;
+          var i = 14;
           while (i > -1) {
           document.getElementById(pageElements[i]).width = elementSizes[i];
           i--;
           }
+          document.getElementById("sketchIcon").style.marginRight = "1rem"; 
+          document.getElementById("minorIcon").style.marginRight = "1rem"; 
+          document.getElementById("minorIcon").style.marginLeft = "1rem"; 
+          document.getElementById("majorIcon").style.marginLeft = "1.3rem"; 
         }
-      }
+      };
 
       var x = window.matchMedia("(max-width: 700px)")
       mobileView(x)

@@ -63,7 +63,7 @@
             pageName = "works";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564945-36fd5080-3277-11eb-9a64-c2092a0e8d97.png";
             document.getElementById("storm").alt = "coming soon :)";
-            document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/101828963-20f95680-3ae7-11eb-9e47-cc03a190b330.png";
+            document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846180-2e0a2580-43c4-11eb-883d-1d7a92adadae.png";
           break;
                 
           case "contact":

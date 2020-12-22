@@ -39,7 +39,7 @@
             pageName = "about";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564842-f9002c80-3276-11eb-8d62-041320521884.png";
             document.getElementById("storm").alt = "hello! I'm Gray, a high school student with a passion for drawing & coding ^__^";
-             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846182-2fd3e900-43c4-11eb-8a0a-eeead25c7b3f.png";
+             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
           break;
 
           case "links":
@@ -51,7 +51,7 @@
             pageName = "links";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
             document.getElementById("storm").alt = "storm pagedoll";
-             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846182-2fd3e900-43c4-11eb-8a0a-eeead25c7b3f.png";
+             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
           break;
 
           case "works":
@@ -63,7 +63,7 @@
             pageName = "works";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564945-36fd5080-3277-11eb-9a64-c2092a0e8d97.png";
             document.getElementById("storm").alt = "coming soon :)";
-            document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846180-2e0a2580-43c4-11eb-883d-1d7a92adadae.png";
+            document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863115-fcef1c80-43e6-11eb-9b0d-56bab6fefc96.png";
           break;
                 
           case "contact":
@@ -75,7 +75,7 @@
             pageName = "contact";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/101214005-23b00380-3630-11eb-9fe3-a191e733acd1.png";
             document.getElementById("storm").alt = "my email is c190draws@gmail.com and my discord tag is 小王子#0164";
-            document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846182-2fd3e900-43c4-11eb-8a0a-eeead25c7b3f.png";
+            document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
           break;
         }
       };
@@ -84,7 +84,7 @@
         if (aboutNumber == 0) {
           document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
           document.getElementById("storm").alt = "storm pagedoll";
-          document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846182-2fd3e900-43c4-11eb-8a0a-eeead25c7b3f.png";
+          document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
           document.getElementById(pageName).style.filter = "brightness(100%)";
           document.getElementById("back").hidden = true;
           document.getElementById("forward").hidden = true;

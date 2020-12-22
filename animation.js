@@ -39,7 +39,7 @@
             pageName = "about";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564842-f9002c80-3276-11eb-8d62-041320521884.png";
             document.getElementById("storm").alt = "hello! I'm Gray, a high school student with a passion for drawing & coding ^__^";
-             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/100564310-89d60880-3275-11eb-8fed-b6e300bf40f8.png";
+             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846182-2fd3e900-43c4-11eb-8a0a-eeead25c7b3f.png";
           break;
 
           case "links":
@@ -51,7 +51,7 @@
             pageName = "links";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
             document.getElementById("storm").alt = "storm pagedoll";
-             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/100564310-89d60880-3275-11eb-8fed-b6e300bf40f8.png";
+             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846182-2fd3e900-43c4-11eb-8a0a-eeead25c7b3f.png";
           break;
 
           case "works":
@@ -75,7 +75,7 @@
             pageName = "contact";
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/101214005-23b00380-3630-11eb-9fe3-a191e733acd1.png";
             document.getElementById("storm").alt = "my email is c190draws@gmail.com and my discord tag is 小王子#0164";
-            document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/100564310-89d60880-3275-11eb-8fed-b6e300bf40f8.png";
+            document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846182-2fd3e900-43c4-11eb-8a0a-eeead25c7b3f.png";
           break;
         }
       };
@@ -84,7 +84,7 @@
         if (aboutNumber == 0) {
           document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
           document.getElementById("storm").alt = "storm pagedoll";
-          document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/100564310-89d60880-3275-11eb-8fed-b6e300bf40f8.png";
+          document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102846182-2fd3e900-43c4-11eb-8a0a-eeead25c7b3f.png";
           document.getElementById(pageName).style.filter = "brightness(100%)";
           document.getElementById("back").hidden = true;
           document.getElementById("forward").hidden = true;

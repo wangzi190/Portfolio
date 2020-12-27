@@ -41,9 +41,10 @@
             document.getElementById("email").hidden = true;
             document.getElementById("discord").hidden = true;
             pageName = "about";
-            document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564842-f9002c80-3276-11eb-8d62-041320521884.png";
-            document.getElementById("storm").alt = "hello! I'm Gray, a high school student with a passion for drawing & coding ^__^";
+            document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/103164265-e584aa80-47bd-11eb-97f3-99513033c27f.png";
+            document.getElementById("storm").alt = "Hi! I'm Gray, a high school student enamored with drawing, coding, math, & the great outdoors.";
              document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
+             document.getElementById("myName").alt = "gray zhuang";
           break;
 
           case "links":
@@ -56,6 +57,7 @@
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
             document.getElementById("storm").alt = "storm pagedoll";
              document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
+             document.getElementById("myName").alt = "gray zhuang";
           break;
 
           case "works":
@@ -74,6 +76,7 @@
             document.getElementById("majorIcon").hidden = false;
             pageName = "works";
             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863115-fcef1c80-43e6-11eb-9b0d-56bab6fefc96.png";
+            document.getElementById("myName").alt = "gray zhuang gallery (level select)";
           break;
                 
           case "contact":
@@ -86,6 +89,7 @@
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/101214005-23b00380-3630-11eb-9fe3-a191e733acd1.png";
             document.getElementById("storm").alt = "my email is c190draws@gmail.com and my discord tag is 小王子#0164";
             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
+            document.getElementById("myName").alt = "gray zhuang";
           break;
         }
       };
@@ -98,6 +102,7 @@
           document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
           document.getElementById("storm").alt = "storm pagedoll";
           document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
+          document.getElementById("myName").alt = "gray zhuang";
           document.getElementById(pageName).style.filter = "brightness(100%)";
           document.getElementById("back").hidden = true;
           document.getElementById("forward").hidden = true;
@@ -124,6 +129,7 @@
             document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
             document.getElementById("storm").alt = "storm pagedoll";
             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
+            document.getElementById("myName").alt = "gray zhuang";
             document.getElementById("works").style.filter = "brightness(100%)";
             pageName = "index";
         } else {
@@ -134,11 +140,11 @@
       function slideNumbers(id) {
         if (id == "back") {
           aboutNumber--;
-          //slideChange();
+          slideChange();
         } else if (id == "forward") {
-          if (aboutNumber != 2 /*<-- change accordingly*/) {
+          if (aboutNumber != 2) {
             aboutNumber++;
-            //slideChange();
+            slideChange();
           } else {
               aboutNumber = 0;
               returnMain();
@@ -147,13 +153,16 @@
       };
 
       function slideChange() {
-    /*  if (aboutNumber == 0) { 
-          document.getElementById("storm").src = "";
+      if (aboutNumber == 0) { 
+          document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/103164265-e584aa80-47bd-11eb-97f3-99513033c27f.png";
+          document.getElementById("storm").alt = "Hi! I'm Gray, a high school student enamored with drawing, coding, math, & the great outdoors.";
         } else if (aboutNumber == 1) {
-          document.getElementById("storm").src = "";
+          document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/103036144-e1d2f880-451d-11eb-9b22-7de564bef8ff.png";
+          document.getElementById("storm").alt = "My ambition is to study art & computer science professionally and to create engaging & meaningful video games.";
         } else if (aboutNumber == 2) {
-          document.getElementById("storm").src = "";
-        } */
+          document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/103164094-96d61100-47bb-11eb-9c64-1420347a42be.png";
+          document.getElementById("storm").alt = "I'm glad you are here; please have a look around :)";
+        }
       };
 
 /*********************************************************/
@@ -189,6 +198,7 @@ function openGallery() {
 
     if (selectedGallery != 0) {
     document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863121-feb8e000-43e6-11eb-8fad-87aa1bb07cc0.png";
+    document.getElementById("myName").alt = "gray zhuang gallery";
 
     switch(selectedGallery) {
       case "sketchIcon":
@@ -249,5 +259,6 @@ function returnGallery() {
   document.getElementById("galleryBack").hidden = true;
   pageName = "works";
   document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863115-fcef1c80-43e6-11eb-9b0d-56bab6fefc96.png";
+  document.getElementById("myName").alt = "gray zhuang gallery (level select)";
   selectedGallery = 0;
 };

@@ -48,21 +48,34 @@
           break;
 
           case "links":
-            buttonHideButton();
+
+            var hideForWorks = ["about", "links", "works", "contact", "storm", "forward", "email", "discord"];
+            var i = 0;
+            while (i < hideForWorks.length) {
+              document.getElementById(hideForWorks[i]).hidden = true;
+              i++;
+            }
+
+            document.getElementById("scratch").hidden = false;
+            document.getElementById("twitter").hidden = false;
+            document.getElementById("instagram").hidden = false;
+            document.getElementById("github").hidden = false;
+
             document.getElementById("back").hidden = false;
-            document.getElementById("forward").hidden = true;
-            document.getElementById("email").hidden = true;
-            document.getElementById("discord").hidden = true;
+            document.getElementById("linkedPlay").hidden = false;
+            document.getElementById("play").hidden = true;
+
+            buttonHideButton();
             pageName = "links";
-            document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
-            document.getElementById("storm").alt = "storm pagedoll";
-             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
-             document.getElementById("myName").alt = "gray zhuang";
+
+             document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/103330303-b9fbfd00-4a15-11eb-8510-978c88ee616a.png";
+             document.getElementById("myName").alt = "gray zhuang links (level select)";
           break;
 
           case "works":
             buttonHideButton();
             selectedGallery = 0;
+
             var hideForWorks = ["about", "links", "works", "contact", "storm", "forward", "email", "discord"];
             var i = 0;
             while (i < hideForWorks.length) {
@@ -71,6 +84,7 @@
             }
             document.getElementById("back").hidden = false;
             document.getElementById("play").hidden = false;
+
             document.getElementById("sketchIcon").hidden = false;
             document.getElementById("minorIcon").hidden = false;
             document.getElementById("majorIcon").hidden = false;
@@ -94,10 +108,14 @@
         }
       };
 
+      var levelButtons = ["sketchIcon", "minorIcon", "majorIcon", "scratch", "twitter", "instagram", "github"];
+
       function returnMain(id) {
-        document.getElementById("sketchIcon").style.filter = "brightness(100%)";
-        document.getElementById("minorIcon").style.filter = "brightness(100%)";
-        document.getElementById("majorIcon").style.filter = "brightness(100%)";
+        var i = 0;
+        while (i < levelButtons.length) {
+          document.getElementById(levelButtons[i]).style.filter = "brightness(100%)";
+              i++;
+        }
         if (aboutNumber == 0) {
           document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png";
           document.getElementById("storm").alt = "storm pagedoll";
@@ -111,7 +129,12 @@
           document.getElementById("sketchIcon").hidden = true;
           document.getElementById("minorIcon").hidden = true;
           document.getElementById("majorIcon").hidden = true;
+          document.getElementById("scratch").hidden = true;
+          document.getElementById("twitter").hidden = true;
+          document.getElementById("instagram").hidden = true;
+          document.getElementById("github").hidden = true;
           document.getElementById("play").hidden = true;
+          document.getElementById("linkedPlay").hidden = true;
           var showAgain = ["about", "links", "works", "contact", "storm"];
           var i = 0;
           while (i < showAgain.length) {
@@ -165,8 +188,6 @@
         }
       };
 
-/*********************************************************/
-//gallery stuff
 var selectedGallery = 0;
 
 function gallerySelection(id) {
@@ -181,6 +202,32 @@ function gallerySelection(id) {
   document.getElementById(id).style.filter = "brightness(72%)";
 };
 
+function linksSelection(id) {
+  var linksOptions = ["scratch", "twitter", "instagram", "github"];
+  linksOptions = linksOptions.filter(e => e !== id);
+  var i = 2;
+  while (i > -1) {
+    document.getElementById(linksOptions[i]).style.filter = "brightness(100%)";
+    i--;
+  }
+  document.getElementById(id).style.filter = "brightness(80%)";
+
+  switch(id) {
+    case "scratch":
+      document.getElementById("linkedPlay").href = "https://scratch.mit.edu/users/Crafty190";
+    break;
+    case "twitter":
+      document.getElementById("linkedPlay").href = "https://twitter.com/c190draws";
+    break;
+    case "instagram":
+      document.getElementById("linkedPlay").href = "https://www.instagram.com/c190draws";
+    break;
+    case "github":
+      document.getElementById("linkedPlay").href = "https://github.com/wangzi190";
+    break;
+  }
+};
+
 function hideGallerySelect() {
   var takeElements = ["about", "links", "works", "contact", "storm", "back", "forward", "email", "discord", "sketchIcon", "minorIcon", "majorIcon", "play"];
   var i = 12;
@@ -189,14 +236,16 @@ function hideGallerySelect() {
     i--;
   }
   document.getElementById("galleryBack").hidden = false;
-}
+};
 
 function openGallery() {
-  document.getElementById("sketchIcon").style.filter = "brightness(100%)";
-  document.getElementById("minorIcon").style.filter = "brightness(100%)";
-  document.getElementById("majorIcon").style.filter = "brightness(100%)";
+  var i = 0;
+  while (i < levelButtons.length) {
+    document.getElementById(levelButtons[i]).style.filter = "brightness(100%)";
+    i++;
+  }
 
-    if (selectedGallery != 0) {
+  if (selectedGallery != 0) {
     document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863121-feb8e000-43e6-11eb-8fad-87aa1bb07cc0.png";
     document.getElementById("myName").alt = "gray zhuang gallery";
 
@@ -209,7 +258,6 @@ function openGallery() {
           i--;
         }
       break;
-
       case "minorIcon":
       hideGallerySelect();
         var i = minorNames.length - 1;
@@ -218,7 +266,6 @@ function openGallery() {
           i--;
         }
       break;
-
       case "majorIcon":
       hideGallerySelect();
         var i = majorNames.length - 1;

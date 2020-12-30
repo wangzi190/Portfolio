@@ -214,16 +214,16 @@ function linksSelection(id) {
 
   switch(id) {
     case "scratch":
-      document.getElementById("linkedPlay").href = "https://scratch.mit.edu/users/Crafty190";
+      document.getElementById("theLink").href = "https://scratch.mit.edu/users/Crafty190";
     break;
     case "twitter":
-      document.getElementById("linkedPlay").href = "https://twitter.com/c190draws";
+      document.getElementById("theLink").href = "https://twitter.com/c190draws";
     break;
     case "instagram":
-      document.getElementById("linkedPlay").href = "https://www.instagram.com/c190draws";
+      document.getElementById("theLink").href = "https://www.instagram.com/c190draws";
     break;
     case "github":
-      document.getElementById("linkedPlay").href = "https://github.com/wangzi190";
+      document.getElementById("theLink").href = "https://github.com/wangzi190";
     break;
   }
 };

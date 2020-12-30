@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -76,6 +75,13 @@
       margin-bottom: 2.25rem;
       brightness: 100;
     }
+    .linksOption {
+      margin-top: 2.25rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 2.45rem;
+      brightness: 100;
+    }
     .art {
       margin-top: 1.5rem;
       margin-left: 1rem;
@@ -101,10 +107,13 @@
         
           <div class="row justify-content-center for-mobile">
             <div class="sketchIcon"><img src="https://user-images.githubusercontent.com/57303754/102733297-bcfa3d80-42f1-11eb-9440-0112043672f3.png" width="120" alt="sketch" id="sketchIcon" class="galleryOption" hidden="true" onmousedown="gallerySelection(id)"></div>
-
             <div class="minorIcon"><img src="https://user-images.githubusercontent.com/57303754/102738041-d2756480-42fd-11eb-8722-65369efa2861.png" width="105" alt="minor" id="minorIcon" class="galleryOption" hidden="true" onmousedown="gallerySelection(id)"></div>
-
             <div class="majorIcon"><img src="https://user-images.githubusercontent.com/57303754/102741401-15880580-4307-11eb-93e0-a389344918be.png" width="160" alt="major" id="majorIcon" class="galleryOption" hidden="true" onmousedown="gallerySelection(id)"></div>
+
+            <div class="scratch"><img src="https://user-images.githubusercontent.com/57303754/103330861-30016380-4a18-11eb-8ad6-b8a9e822bdf1.png" width="75" alt="scratch" id="scratch" class="linksOption" hidden="true" onmousedown="linksSelection(id)"></div>
+            <div class="twitter"><img src="https://user-images.githubusercontent.com/57303754/103330861-30016380-4a18-11eb-8ad6-b8a9e822bdf1.png" width="75" alt="twitter" id="twitter" class="linksOption" hidden="true" onmousedown="linksSelection(id)"></div>
+            <div class="instagram"><img src="https://user-images.githubusercontent.com/57303754/103330861-30016380-4a18-11eb-8ad6-b8a9e822bdf1.png" width="75" alt="instagram" id="instagram" class="linksOption" hidden="true" onmousedown="linksSelection(id)"></div>
+            <div class="github"><img src="https://user-images.githubusercontent.com/57303754/103330861-30016380-4a18-11eb-8ad6-b8a9e822bdf1.png" width="75" alt="github" id="github" class="linksOption" hidden="true" onmousedown="linksSelection(id)"></div>
           </div>
       </div>
     </div>
@@ -156,7 +165,7 @@
         </div>
 
         <div class="row">
-          <div class="column"><a href="links"><img src="https://user-images.githubusercontent.com/57303754/100563572-8c376300-3273-11eb-8ab5-79b2794c130a.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)" onload="refreshButton(id)"></a></div>
+          <div class="column"><img src="https://user-images.githubusercontent.com/57303754/100563572-8c376300-3273-11eb-8ab5-79b2794c130a.png" width="75" alt="links" class="bean" id="links" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="switchMain(id)" onload="refreshButton(id)"></div>
         </div>
 
         <div class="row">
@@ -169,7 +178,7 @@
           <div class="column">
             <div id="parentSquare"><img src="https://user-images.githubusercontent.com/57303754/100564216-3f548c00-3275-11eb-976b-fca49ff1f360.png" width="300" alt="storm pagedoll" id="storm" >
               <div id="mailIcon">
-                <a href="mailto:c190draws@gmail.com"><img src="https://user-images.githubusercontent.com/57303754/100697052-d4c15000-3349-11eb-818b-9477681b8f2d.png" alt="email" id="email"  onmouseover="darkenButton(id)" onmouseout="returnButton(id)" hidden="true"></a>
+                <a href="mailto:c190draws@gmail.com" target="_blank"><img src="https://user-images.githubusercontent.com/57303754/100697052-d4c15000-3349-11eb-818b-9477681b8f2d.png" alt="email" id="email"  onmouseover="darkenButton(id)" onmouseout="returnButton(id)" hidden="true"></a>
               </div>
               <div id="discordIcon">
                 <a href="https://discord.gg/JCfcdTwtju" target="_blank"><img src="https://user-images.githubusercontent.com/57303754/101148549-9b4f4580-35d2-11eb-82aa-a60bbf0b5451.png" alt="discord" id="discord"  onmouseover="darkenButton(id)" onmouseout="returnButton(id)" hidden="true"></a>
@@ -181,18 +190,25 @@
     </div>
 
     <div class="row justify-content-center for-mobile">
-      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" width="45" alt="back" id="back" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnMain(id)" hidden="true"></div>
-      <div class="column"><img src="https://user-images.githubusercontent.com/57303754/101407815-4d676580-3890-11eb-8da5-7d64a60941ef.png" width="45" alt="forward" id="forward" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="slideNumbers(id)" hidden="true"><img src="https://user-images.githubusercontent.com/57303754/101849108-d76f3280-3b0b-11eb-95fe-fb3bb709f739.png" width="70" alt="play" id="play" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="openGallery()" hidden="true"><img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" width="45" alt="back" id="galleryBack" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnGallery()" hidden="true"></div>
+      <div class="column">
+        <img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" width="45" alt="back" id="back" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnMain(id)" hidden="true">
+      </div>
+      <div class="column">
+        <img src="https://user-images.githubusercontent.com/57303754/101407815-4d676580-3890-11eb-8da5-7d64a60941ef.png" width="45" alt="forward" id="forward" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="slideNumbers(id)" hidden="true">
+        <img src="https://user-images.githubusercontent.com/57303754/101849108-d76f3280-3b0b-11eb-95fe-fb3bb709f739.png" width="70" alt="play" id="play" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="openGallery()" hidden="true">
+        <a href="#"><img src="https://user-images.githubusercontent.com/57303754/101849108-d76f3280-3b0b-11eb-95fe-fb3bb709f739.png" width="70" alt="play" id="linkedPlay" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" hidden="true"></a>
+        <img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" width="45" alt="back" id="galleryBack" class="nextToBack" onmouseover="darkenButton(id)" onmouseout="returnButton(id)" onmousedown="returnGallery()" hidden="true">
+      </div>
     </div>
     
     <script type="text/javascript">
 
       function mobileView(x) {
-        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back", "forward", "email", "discord", "sketchIcon", "minorIcon", "majorIcon", "play", "galleryBack"];
-        var elementSizes = ["75", "75", "70", "75", "300", "300", "45", "45", "73", "70", "120", "105", "160", "70", "45"];
-        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75", "0.75", "0.75", "0.75", "0.7", "0.7", "0.7", "0.75", "0.75"];
+        var pageElements = ["about", "links", "works", "contact", "storm", "myName", "back", "forward", "email", "discord", "sketchIcon", "minorIcon", "majorIcon", "play", "galleryBack", "scratch", "twitter", "instagram", "github", "linkedPlay"];
+        var elementSizes = ["75", "75", "70", "75", "300", "300", "45", "45", "73", "70", "120", "105", "160", "70", "45", "75", "75", "75", "75", "70"];
+        var elementPercentages = ["0.8", "0.8", "0.8", "0.8", "0.75", "0.75", "0.75", "0.75", "0.75", "0.75", "0.7", "0.7", "0.7", "0.75", "0.75", "0.7", "0.7", "0.7", "0.7", "0.75"];
         if (x.matches) {
-          var i = 14;
+          var i = 19;
           while (i > -1) {
             document.getElementById(pageElements[i]).width = document.getElementById(pageElements[i]).width * elementPercentages[i];
             i--;
@@ -202,7 +218,7 @@
           document.getElementById("minorIcon").style.marginLeft = "0.5rem"; 
           document.getElementById("majorIcon").style.marginLeft = "0.75rem"; 
         } else {
-          var i = 14;
+          var i = 19;
           while (i > -1) {
           document.getElementById(pageElements[i]).width = elementSizes[i];
           i--;

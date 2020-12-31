@@ -210,7 +210,7 @@ function linksSelection(id) {
     document.getElementById(linksOptions[i]).style.filter = "brightness(100%)";
     i--;
   }
-  document.getElementById(id).style.filter = "brightness(80%)";
+  document.getElementById(id).style.filter = "brightness(72%)";
 
   switch(id) {
     case "scratch":

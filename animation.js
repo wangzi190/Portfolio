@@ -111,6 +111,8 @@
       var levelButtons = ["sketchIcon", "minorIcon", "majorIcon", "scratch", "twitter", "instagram", "github"];
 
       function returnMain(id) {
+        document.getElementById("theLink").href = "#";
+        document.getElementById("theLink").target = "";
         var i = 0;
         while (i < levelButtons.length) {
           document.getElementById(levelButtons[i]).style.filter = "brightness(100%)";
@@ -211,7 +213,8 @@ function linksSelection(id) {
     i--;
   }
   document.getElementById(id).style.filter = "brightness(72%)";
-
+  document.getElementById("theLink").target = "_blank";
+      
   switch(id) {
     case "scratch":
       document.getElementById("theLink").href = "https://scratch.mit.edu/users/Crafty190";

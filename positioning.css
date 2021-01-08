@@ -77,6 +77,58 @@
       margin-bottom: 2.25rem;
       brightness: 100;
     }
+    @media only screen and (max-width: 995px) {
+      #wolfStudy {
+        margin-top: 1.5rem;
+      }
+      #horseStudy {
+        margin-top: 1.5rem;
+      }
+      #orchid {
+        margin-top: 1rem;
+      }
+      #flower {
+        margin-top: 1.5rem;
+      }
+      #tuershen {
+        margin-top: 1.5rem;
+      }
+      #succulent {
+        margin-top: 1rem;
+      }
+      #majorFlower {
+        margin-top: 1.5rem;
+      }
+      #banff {
+        margin-top: 1.5rem;
+      }
+    }
+    @media only screen and (max-width: 665px) {
+      #wolfStudy {
+        margin-top: 1.5rem;
+      }
+      #horseStudy {
+        margin-top: 1rem;
+      }
+      #orchid {
+        margin-top: 1rem;
+      }
+      #flower {
+        margin-top: 1.5rem;
+      }
+      #tuershen {
+        margin-top: 1rem;
+      }
+      #succulent {
+        margin-top: 1rem;
+      }
+      #majorFlower {
+        margin-top: 1.5rem;
+      }
+      #banff {
+        margin-top: 1rem;
+      }
+    }
     .topArt {
       margin-top: 1.75rem;
       margin-left: 1rem;

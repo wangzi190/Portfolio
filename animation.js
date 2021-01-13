@@ -2,7 +2,7 @@
       var aboutNumber;
 
       var sketchNames = ["wolfStudy", "horseStudy", "orchid", "nighttime", "pants", "streamArt"];
-      var minorNames = ["flower", "rhino", "succulent", "wipFlower", "quote", "kitteysocks", "crayonFlower", "tuershen", "polarbear", "blm", "haring", "kimpa"];
+      var minorNames = ["flower", "rhino", "succulent", "thankYou", "quote", "kitteysocks", "crayonFlower", "tuershen", "polarbear", "blm", "haring", "kimpa"];
       var majorNames = ["majorFlower", "banff"];
 
       var darkenButton = function(id) {

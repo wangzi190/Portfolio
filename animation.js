@@ -1,7 +1,7 @@
       var pageName;
       var aboutNumber;
 
-      var sketchNames = ["wolfStudy", "horseStudy", "orchid", "nighttime", "pants", "streamArt"];
+      var sketchNames = ["wolfStudy", "horseStudy", "orchid", "nighttime", "pants", "streamArt", "treeSketch", "catSketch", "smallBot"];
       var minorNames = ["flower", "rhino", "succulent", "thankYou", "quote", "kitteysocks", "crayonFlower", "tuershen", "polarbear", "blm", "haring", "kimpa"];
       var majorNames = ["majorFlower", "banff"];
 

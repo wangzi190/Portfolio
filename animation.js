@@ -42,7 +42,7 @@
             document.getElementById("email").hidden = true;
             document.getElementById("discord").hidden = true;
             pageName = "about";
-            document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/103164265-e584aa80-47bd-11eb-97f3-99513033c27f.png";
+            document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/107282657-218f6a00-6a10-11eb-8dad-e61d1798f836.png";
             document.getElementById("storm").alt = "Hi! I'm Gray, a high school student enamored with drawing, coding, math, & the great outdoors.";
              document.getElementById("myName").src = "https://user-images.githubusercontent.com/57303754/102863112-f9f42c00-43e6-11eb-8b9b-423d3f3df709.png";
              document.getElementById("myName").alt = "gray zhuang";
@@ -183,7 +183,7 @@
 
       function slideChange() {
       if (aboutNumber == 0) { 
-          document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/103164265-e584aa80-47bd-11eb-97f3-99513033c27f.png";
+          document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/107282657-218f6a00-6a10-11eb-8dad-e61d1798f836.png";
           document.getElementById("storm").alt = "Hi! I'm Gray, a high school student enamored with drawing, coding, math, & the great outdoors.";
         } else if (aboutNumber == 1) {
           document.getElementById("storm").src = "https://user-images.githubusercontent.com/57303754/103036144-e1d2f880-451d-11eb-9b22-7de564bef8ff.png";

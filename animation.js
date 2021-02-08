@@ -37,6 +37,7 @@
           case "about":
             buttonHideButton();
             document.getElementById("back").hidden = false;
+            document.getElementById("back").style.marginTop = "0.5rem";
             document.getElementById("forward").hidden = false;
             document.getElementById("email").hidden = true;
             document.getElementById("discord").hidden = true;
@@ -62,6 +63,7 @@
             document.getElementById("github").hidden = false;
 
             document.getElementById("back").hidden = false;
+            document.getElementById("back").style.marginTop = "1.25rem";
             document.getElementById("linkedPlay").hidden = false;
             document.getElementById("play").hidden = true;
 
@@ -83,6 +85,7 @@
               i++;
             }
             document.getElementById("back").hidden = false;
+            document.getElementById("back").style.marginTop = "1.25rem";
             document.getElementById("play").hidden = false;
 
             document.getElementById("sketchIcon").hidden = false;
@@ -96,6 +99,7 @@
           case "contact":
             buttonHideButton();
             document.getElementById("back").hidden = false;
+            document.getElementById("back").style.marginTop = "0.5rem";
             document.getElementById("forward").hidden = true;
             document.getElementById("email").hidden = false;
             document.getElementById("discord").hidden = false;
